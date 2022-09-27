@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Discovery Expedition</title>
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Play);
+        @import url(http://fonts.googleapis.com/css?family=Monoton);
+    
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    
+        ol,
+        ul {
+            list-style-type: none;
+        }
+    
+        a {
+            text-decoration: none;
+            color: #dddddd;
+        }
+    
+        body {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+    
+        /* 배경동영상 */
+        * {
+            box-sizing: border-box;
+        }
+    
+        .video-background {
+            background: #000;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -99;
+        }
+    
+        .video-foreground,
+        .video-background iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    
+        @media (min-aspect-ratio: 16/9) {
+            .video-foreground {
+                height: 300%;
+                top: -100%;
+            }
+        }
+    
+        @media (max-aspect-ratio: 16/9) {
+            .video-foreground {
+                width: 300%;
+                left: -100%;
+            }
+        }
+    
+        /* 로고 */
+        h1 {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            z-index: 10;
+        }
+    
+        h1 img {
+            width: 150px;
+        }
+    
+        header {
+            width: 700px;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            left: -560px;
+            background: linear-gradient(-45deg, #C0C2C8, #A4ABBD, #707788);
+            transform: skewX(-40deg);
+        }
+    
+        /* 1depth */
+        #gnb {
+            width: 220px;
+            position: absolute;
+            top: 150px;
+            right: 0px;
+        }
+    
+        #gnb>li {
+            position: relative;
+        }
+    
+        #gnb>li>a {
+            display: block;
+            width: 220px;
+            height: 50px;
+            font: bold 18px/3 play;
+            color: #222;
+            box-sizing: border-box;
+            padding-right: 40px;
+            text-align: right;
+        }
+    
+        #gnb>li.on>a {
+            background: #111;
+            color: #fff;
+        }
+    
+        #gnb>li:hover>a {
+            background: #ddd;
+            color: #000;
+        }
+    
+        #gnb em {
+            display: inline-block;
+            transform: skewX(40deg) !important;
+        }
+    
+        #gnb em i {
+            margin-right: 10px;
+        }
+    
+        /* 2depth */
+        #gnb ul {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+    
+        #gnb>li:hover ul {
+            opacity: 1;
+            left: 225px;
+        }
+    
+        #gnb ul a {
+            display: block;
+            width: 150px;
+            height: 40px;
+            background: #222;
+            border-bottom: 1px solid #14345b;
+            font: bold 16px/2.5 arial;
+            color: #fff;
+            box-sizing: border-box;
+            padding-left: 50px;
+            margin-bottom: 3px;
+            transition: all 0.5s;
+        }
+    
+        #gnb ul a:hover {
+            background: #b9fb05;
+            color: #333;
+        }
+    
+        /* sns */
+        #sns {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+        }
+    
+        #sns li {
+            float: left;
+            padding: 10px;
+        }
+    
+        #sns .fa {
+            color: #14345b;
+            font-size: 25px;
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+    
+        #sns li:hover .fa {
+            opacity: 1;
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body id="myPage">
+    <!-- 배경동영상 -->
+    <div class="video-background">
+        <div class="video-foreground">
+            <iframe src="https://www.youtube.com/embed/bc3BJPhcKsE?controls=0&showinfo=0&autoplay=1&loop=1&playlist=bc3BJPhcKsE,KLmgqtxqoTQ&mute=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <!-- 로고 -->
+    <h1><a class="navbar-brand" href="#myPage"><img src="img/pic01.png" alt="로고"></a></h1>
+
+    <!-- header -->
+    <header>
+        <ul id="gnb">
+            <li>
+                <a href="#"><em>Discovery Expedition</em></a>
+            </li>
+            <li class="on">
+                <a href="#"><em><i class="fa fa-refresh fa-spin"></i>Men</em></a>
+                <ul>
+					<li><a href="#"><em>outer</em></a></li>
+					<li><a href="#"><em>tops</em></a></li>
+					<li><a href="#"><em>bottoms</em></a></li>
+				</ul>
+            </li>
+            <li>
+                <a href="#"><em>Women</em></a>
+                <ul>
+					<li><a href="#"><em>outer</em></a></li>
+					<li><a href="#"><em>tops</em></a></li>
+					<li><a href="#"><em>bottoms</em></a></li>		
+				</ul>
+            </li>
+            <li>
+                <a href="#"><em>Shoes</em></a>
+                <ul>
+					<li><a href="#"><em>slippers</em></a></li>
+					<li><a href="#"><em>sandals</em></a></li>			
+					<li><a href="#"><em>boots</em></a></li>			
+				</ul>
+            </li>
+            <li>
+                <a href="#"><em>Acc</em></a>
+                <ul>
+					<li><a href="#"><em>caps</em></a></li>						
+					<li><a href="#"><em>bags</em></a></li>						
+				</ul>
+            </li>
+        </ul>
+    </header>
+    <!-- sns 버튼모음 -->
+	<ul id="sns">
+		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+	</ul>
+</body>
+</html>
